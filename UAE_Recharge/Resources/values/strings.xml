@@ -1,0 +1,38 @@
+<resources>
+	<!-- APP Info -->
+	<string name="app_name">UAE Recharge</string>
+	<string name="app_description">Recharge any local number in UAE.</string>
+	<!-- Page titles -->
+	<string name="title_home">Home</string>
+	<string name="title_sign_in">Sign In</string>
+	<string name="title_sign_up">Sign Up</string>
+	
+	<string name="title_dashboard">Dashboard</string>
+	<string name="title_notifications">Notifications</string>
+	<string name="username_hint">User name</string>
+	<string name="sign_in_hint">User name</string>
+	<string name="password_hint">Password</string>
+	<string name="sign_in_button">Sign In</string>
+	<string name="phone_number_hint">Phone number</string>
+	<string name="sign_up_text">Sign Up</string>
+	<string name="sign_up_prompt">No account? Sign Up</string>
+	<string name="divider">----------------------------------------</string>
+	<string name="label_username">Username:</string>
+	<string name="label_phone_number">Phone Number:</string>
+	<string name="label_balance">Balance:</string>
+	<string name="title_beneficiaries">Beneficiaries</string>
+	<string name="top_up_button_text">Top up</string>
+    <string name="add_beneficiary_title">Add Beneficiary</string>
+    <string name="current_beneficiary_count">Current Beneficiary Count: </string>
+    <string name="nickname_hint">Nickname (max 20 characters)</string>
+    <string name="save_button_text">Save</string>
+    <string name="top_up_title">Top Up</string>
+    <string name="your_balance_label">Your Balance:</string>
+    <string name="monthly_limit_label">Monthly limit: AED 3000</string>
+    <string name="beneficiary_nickname_label">Beneficiary Nickname:</string>
+    <string name="beneficiary_phone_number_label">Beneficiary Phone Number:</string>
+    <string name="select_amount_label">Select Amount:</string>
+    <string name="transfer_button_text">Transfer</string>
+    <string name="add_beneficiaries">+</string>
+
+</resources>

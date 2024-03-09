@@ -1,0 +1,42 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="120dp"
+    android:layout_width="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/card_background"> <!-- Add a custom background drawable to the RelativeLayout -->
+
+        <TextView
+            android:id="@+id/nicknameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/phoneNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nicknameTextView"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/topUpButton"
+            android:layout_height="36dp"
+			android:layout_width="60dp"
+            android:text="@string/top_up_button_text"
+            android:textSize="12sp"
+            android:padding="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/phoneNumberTextView"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_button_background"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+	<!-- Title -->
+	<TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_home"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+	<!-- Divider -->
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginBottom="16dp"/>
+
+	<!-- User Information CardView -->
+	<androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+		android:foreground="?android:attr/selectableItemBackground">
+
+
+		<!-- User Information Layout -->
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+			android:padding="16dp">
+
+			<!-- User Name -->
+			<TextView
+                android:id="@+id/usernameLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_username"
+                android:layout_marginEnd="8dp"
+				android:layout_marginRight="8dp"
+				android:layout_marginLeft="8dp" />
+
+			<TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp"
+				android:layout_marginRight="8dp"
+				android:layout_marginLeft="8dp" />
+			<!-- Add margin bottom -->
+
+			<!-- Phone Number -->
+			<TextView
+                android:id="@+id/phoneNumberLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_phone_number"
+                android:layout_marginEnd="8dp"
+				android:layout_marginRight="8dp"
+				android:layout_marginLeft="8dp" />
+
+			<TextView
+                android:id="@+id/phoneNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp"
+				android:layout_marginRight="8dp"
+				android:layout_marginLeft="8dp" />
+			<!-- Add margin bottom -->
+
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<!-- Balance CardView -->
+	<androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+		android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:padding="16dp"
+		android:foreground="?android:attr/selectableItemBackground">
+
+
+		<!-- Balance Layout -->
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+			android:padding="16dp">
+
+			<!-- Balance Label -->
+			<TextView
+                android:id="@+id/balanceLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_balance"
+                android:layout_marginEnd="8dp"
+				android:layout_marginRight="8dp"
+				android:layout_marginLeft="8dp" />
+
+			<!-- Balance Value -->
+			<TextView
+                android:id="@+id/balanceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp"
+				android:layout_marginRight="8dp"
+				android:layout_marginLeft="8dp" />
+			<!-- Add margin bottom -->
+
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<!-- Divider -->
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+	<!-- Beneficiaries -->
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+		<!-- Title -->
+		<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_beneficiaries"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+		<!-- Add Beneficiary Button -->
+		<Button
+			android:id="@+id/addBeneficiaryButton"
+            android:layout_height="36dp"
+			android:layout_width="36dp"
+            android:text="@string/add_beneficiaries"
+            android:textSize="14sp" 
+            android:padding="8sp"
+			android:gravity="center"
+		    android:background="@drawable/rounded_button"
+		    android:layout_marginEnd="8dp"/>
+
+	</LinearLayout>
+
+	<!-- RecyclerView for Beneficiaries -->
+	<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/beneficiariesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:scrollbars="horizontal"/>
+
+</LinearLayout>
