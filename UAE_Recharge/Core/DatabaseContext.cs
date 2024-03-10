@@ -53,14 +53,14 @@ namespace UAE_Recharge.Core.Database
         {
             try
             {
-               //// Delete existing users
-               //await Connection.DeleteAllAsync<User>();
+                //// Delete existing users
+                //await Connection.DeleteAllAsync<User>();
 
-               // // Delete existing beneficiaries
-               // await Connection.DeleteAllAsync<Beneficiary>();
+                //// Delete existing beneficiaries
+                //await Connection.DeleteAllAsync<Beneficiary>();
 
-               // // Delete existing transactions
-               // await Connection.DeleteAllAsync<Transaction>();
+                //// Delete existing transactions
+                //await Connection.DeleteAllAsync<Transaction>();
 
                 // Check if data already exists
                 var existingUsers = await Connection.Table<User>().CountAsync();
@@ -70,26 +70,26 @@ namespace UAE_Recharge.Core.Database
                 // If data doesn't exist, insert mock data
                 if (existingUsers == 0 && existingBeneficiaries == 0 && existingTransactions == 0)
                 {
-                    // Insert mock data for users
-                    await Connection.InsertAllAsync(new List<User>
-                        {
-                            new User {Id = 1, Username = "user1", PhoneNumber = "1234567890", Password = "password1", Balance = 5000, IsSynced = true, IsVerified = true },
-                            new User {Id = 2, Username = "user2", PhoneNumber = "0987654321", Password = "password2", Balance = 7000, IsSynced = true, IsVerified = false }
-                        });
+                // Insert mock data for users
+                await Connection.InsertAllAsync(new List<User>
+                    {
+                        new User {Id = 1, Username = "ahmed1", PhoneNumber = "0506901530", Password = "password1", Balance = 3500, IsSynced = true, IsVerified = true },
+                        new User {Id = 2, Username = "ahmed2", PhoneNumber = "0987654321", Password = "password2", Balance = 3500, IsSynced = true, IsVerified = false }
+                    });
 
-            //        // Insert mock data for beneficiaries
-            //        await Connection.InsertAllAsync(new List<Beneficiary>
-            //{
-            //    new Beneficiary {Id = 1, UserId = 1, Nickname = "friend1", PhoneNumber = "1111111111", TotalTopUps = 50, IsSynced = true },
-            //    new Beneficiary {Id = 2, UserId = 2, Nickname = "friend2", PhoneNumber = "2222222222", TotalTopUps = 100, IsSynced = true }
-            //});
+                    //        // Insert mock data for beneficiaries
+                    //await Connection.InsertAllAsync(new List<Beneficiary>
+                    //{
+                    //    new Beneficiary {Id = 1, UserId = 1, Nickname = "friend1", PhoneNumber = "1111111111", TotalTopUps = 50, IsSynced = true },
+                    //    new Beneficiary {Id = 2, UserId = 2, Nickname = "friend2", PhoneNumber = "2222222222", TotalTopUps = 100, IsSynced = true }
+                    //});
 
-            //        // Insert mock data for transactions
-            //        await Connection.InsertAllAsync(new List<Transaction>
-            //{
-            //    new Transaction {Id = 1, UserId = 1, BeneficiaryId = 1, Amount = 50, Timestamp = DateTime.Now, IsSynced = true },
-            //    new Transaction {Id = 2, UserId = 2, BeneficiaryId = 2, Amount = 100, Timestamp = DateTime.Now, IsSynced = true }
-            //});
+                    //        // Insert mock data for transactions
+                    //        await Connection.InsertAllAsync(new List<Transaction>
+                    //{
+                    //    new Transaction {Id = 1, UserId = 1, BeneficiaryId = 1, Amount = 50, Timestamp = DateTime.Now, IsSynced = true },
+                    //    new Transaction {Id = 2, UserId = 2, BeneficiaryId = 2, Amount = 100, Timestamp = DateTime.Now, IsSynced = true }
+                    //});
 
                     // Add more mock data as needed
                 }

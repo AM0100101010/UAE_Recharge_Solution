@@ -31,7 +31,8 @@ namespace UAE_Recharge
         private TextView remainingBeneficiaryBalanceTextView;
         private Spinner topUpAmountSpinner;
         private Button transferButton;
-
+        private const int ChargeAmount = 1;
+        private TextView chargeAmountTextView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -74,6 +75,7 @@ namespace UAE_Recharge
             beneficiaryPhoneNumberTextView = FindViewById<TextView>(Resource.Id.beneficiaryPhoneNumberTextView);
             remainingBeneficiaryBalanceTextView = FindViewById<TextView>(Resource.Id.remainingBeneficiaryBalanceTextView);
             transferButton = FindViewById<Button>(Resource.Id.transferButton);
+            chargeAmountTextView = FindViewById<TextView>(Resource.Id.chargeAmountTextView); 
         }
 
         private void LoadRemainingBalances()
@@ -101,7 +103,7 @@ namespace UAE_Recharge
                 //remainingUserBalanceTextView.Text = $"Remaining for user: AED {remainingUserBalance}";
                 beneficiaryNicknameTextView.Text = beneficiary.Nickname;
                 beneficiaryPhoneNumberTextView.Text = beneficiary.PhoneNumber;
-                //remainingBeneficiaryBalanceTextView.Text = $"Remaining for {beneficiary.Nickname}: AED {remainingBeneficiaryBalance}";
+                remainingBeneficiaryBalanceTextView.Text = remainingBalanceText;// $"Remaining for {beneficiary.Nickname}: AED {remainingBeneficiaryBalance}";
             });
         }
 
@@ -111,7 +113,7 @@ namespace UAE_Recharge
             // Get the selected top-up amount from the Spinner
             string selectedAmountText = topUpAmountSpinner.SelectedItem.ToString();
             int amount = int.Parse(selectedAmountText.Replace("AED ", ""));
-
+            amount = amount + ChargeAmount;
             try
             {
                 // Check if the amount exceeds the user's remaining balance
@@ -161,7 +163,7 @@ namespace UAE_Recharge
                 user.Balance -= amount;
 
                 // Display a success message
-                Toast.MakeText(this, $"Successfully topped up {beneficiary.Nickname} with {amount} units", ToastLength.Short).Show();
+                Toast.MakeText(this, $"Successfully topped up {beneficiary.Nickname} with {amount - ChargeAmount} AED (including {ChargeAmount} AED charge)", ToastLength.Short).Show();
 
                 // Refresh the HomeActivity by recreating it
                 var homeActivityIntent = new Intent(this, typeof(HomeActivity));

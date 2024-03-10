@@ -34,5 +34,7 @@
     <string name="select_amount_label">Select Amount:</string>
     <string name="transfer_button_text">Transfer</string>
     <string name="add_beneficiaries">+</string>
+    <string name="label_Charge">Charge: 1 AED</string>
+
 
 </resources>
