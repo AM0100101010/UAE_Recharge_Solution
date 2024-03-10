@@ -47,3 +47,23 @@ This repository contains the source code for the UAE Recharge mobile application
 ## Special List Adapter
 - The application includes a special list adapter for displaying data in lists.
 - This adapter optimizes list rendering and enhances user experience.
+
+## Automated testing
+After several tries of ms, unit and xamarin UI tests, it seems that the best way to automate testing is to use an andriod specifc testing framework outside the visual studio, or a cloud service.
+Also to integrate google anayltics for better runtime minitoring 
+
+## Note on Monthly Limit Calculation on top-ups
+
+The following code snippet has been highlighted for reference, as it ideally should run on a background thread or a background service for improved performance. This code calculates the remaining balances for users and beneficiaries based on monthly top-up limits.
+
+It's essential to handle these calculations efficiently to prevent blocking the main UI thread and to maintain the responsiveness of the application. Additionally, ensuring the accuracy of the displayed balances contributes to a better user experience and helps users make informed decisions when performing top-up transactions.
+
+The monthly limit for both the user and beneficiary should be accurately calculated and updated on the data records. Once calculated, these balances can then be appropriately displayed on the user interface to provide users with real-time information about their available balance and any remaining limits for top-up transactions.
+
+```csharp
+
+// Calculate remaining balances
+//decimal totalToppedUpThisMonth = transactionService.GetTotalToppedUpThisMonthAsync(user.Id).Result;
+//decimal remainingUserBalance = 3000 - totalToppedUpThisMonth;
+//decimal remainingBeneficiaryBalance = user.IsVerified ? 500 - transactionService.GetTotalToppedUpThisMonthAsync(user.Id, beneficiary.Id).Result : 1000 - transactionService.GetTotalToppedUpThisMonthAsync(user.Id, beneficiary.Id).Result;
+
