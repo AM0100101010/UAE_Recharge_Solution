@@ -47,3 +47,7 @@ This repository contains the source code for the UAE Recharge mobile application
 ## Special List Adapter
 - The application includes a special list adapter for displaying data in lists.
 - This adapter optimizes list rendering and enhances user experience.
+
+## Automated testing
+After several tries of ms, unit and xamarin UI tests, it seems that the best way to automate testing is to use an andriod specifc testing framework outside the visual studio, or a cloud service.
+Also to integrate google anayltics for better runtime minitoring 
