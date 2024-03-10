@@ -5,6 +5,7 @@ This repository contains the source code for the UAE Recharge mobile application
 
 ## Features
 - User registration and login
+- Ability to add and manage beneficiaries for easy top-up
 - Top-up functionality
 - Monthly limit enforcement
 - Integration with API and local SQL database for data management
@@ -30,7 +31,7 @@ This repository contains the source code for the UAE Recharge mobile application
 2. Open the project in Visual Studio.
 3. Build and run the application on an Android emulator or physical device.
 4. Use the provided user credentials to log in and test the application functionality.
-5. Follow the on-screen instructions to top up your balance and perform other actions.
+5.  Follow the on-screen instructions to manage beneficiaries, and perform top up beneficiaries balances.
 
 ## Data Management
 - The application can work with both API and local SQL database.
