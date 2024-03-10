@@ -65,6 +65,18 @@ namespace UAE_Recharge
                 intent.PutExtra("User", JsonConvert.SerializeObject(user));
                 StartActivity(intent);
             };
+
+            // Find the "Transaction History" button
+            Button transactionHistoryButton = FindViewById<Button>(Resource.Id.transactionHistoryButton);
+
+            // Add click listener to the "Transaction History" button
+            transactionHistoryButton.Click += (sender, e) =>
+            {
+                // Launch TransactionHistoryActivity passing the user data
+                Intent intent = new Intent(this, typeof(TransactionHistoryActivity));
+                intent.PutExtra("User", JsonConvert.SerializeObject(user));
+                StartActivity(intent);
+            };
         }
 
         private async void LoadBeneficiaries(int userId)

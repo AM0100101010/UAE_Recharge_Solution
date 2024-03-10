@@ -149,7 +149,7 @@ namespace UAE_Recharge
                 }
 
                 // Create the transaction
-                await transactionService.CreateTransactionAsync(user.Id, beneficiary.Id, amount);
+                await transactionService.CreateTransactionAsync(user.Id, beneficiary.Id, beneficiary.Nickname, amount);
 
                 // Update the total top-ups for the beneficiary
                 bool isTopUpsUpdated = await beneficiaryService.UpdateTotalTopUpsAsync(beneficiary.Id, amount);

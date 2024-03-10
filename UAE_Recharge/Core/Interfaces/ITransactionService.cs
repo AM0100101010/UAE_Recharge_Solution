@@ -7,7 +7,7 @@ namespace UAE_Recharge.Core.Interfaces
     public interface ITransactionService
     {
         Task<List<Transaction>> GetTransactionsAsync(int userId);
-        Task<Transaction> CreateTransactionAsync(int userId, int beneficiaryId, int amount);
+        Task<Transaction> CreateTransactionAsync(int userId, int beneficiaryId, string beneficiaryNickname, int amount);
         Task<bool> SyncTransactionsAsync(int userId);
         Task<bool> CanUserTopUpAsync(User user, Beneficiary beneficiary, decimal amount);
         Task<decimal> GetTotalToppedUpThisMonthAsync(int userId);

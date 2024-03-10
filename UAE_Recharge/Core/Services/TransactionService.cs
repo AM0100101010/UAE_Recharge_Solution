@@ -59,7 +59,7 @@ namespace UAE_Recharge.Core.Services
         }
 
 
-        public async Task<Transaction> CreateTransactionAsync(int userId, int beneficiaryId, int amount)
+        public async Task<Transaction> CreateTransactionAsync(int userId, int beneficiaryId, string beneficiaryNickname, int amount)
         {
             if (_dbContext == null)
             {
@@ -79,7 +79,8 @@ namespace UAE_Recharge.Core.Services
                 BeneficiaryId = beneficiaryId,
                 Amount = amount,
                 Timestamp = DateTime.UtcNow,
-                IsSynced = false
+                IsSynced = false,
+                BeneficiaryNickname = beneficiaryNickname
             };
 
             try

@@ -21,5 +21,7 @@ namespace UAE_Recharge.Core.Models
         public int Amount { get; set; }
         public DateTime Timestamp { get; set; }
         public bool IsSynced { get; set; } // Indicates if the transaction has been synced
+        public string BeneficiaryNickname { get; set; }
+
     }
 }

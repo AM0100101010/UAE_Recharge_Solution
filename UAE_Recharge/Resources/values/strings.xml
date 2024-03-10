@@ -35,6 +35,6 @@
     <string name="transfer_button_text">Transfer</string>
     <string name="add_beneficiaries">+</string>
     <string name="label_Charge">Charge: 1 AED</string>
-
-
+	<string name="transaction_history">Transaction history</string>
+	
 </resources>

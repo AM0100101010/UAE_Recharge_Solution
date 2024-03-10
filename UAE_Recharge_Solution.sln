@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UAE_Recharge", "UAE_Recharge\UAE_Recharge.csproj", "{2DFDD56A-6118-4640-97D3-43E29ED30664}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UAE_Recharge.UnitTests", "UAE_Recharge.UnitTests\UAE_Recharge.UnitTests.csproj", "{5772E408-FB83-43AA-8064-5E502C8EF6D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UAE_Charge_UITest", "UAE_Charge_UITest\UAE_Charge_UITest.csproj", "{16C02D86-3547-4D62-A7D9-2AB75AAE6CAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{2DFDD56A-6118-4640-97D3-43E29ED30664}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DFDD56A-6118-4640-97D3-43E29ED30664}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2DFDD56A-6118-4640-97D3-43E29ED30664}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{5772E408-FB83-43AA-8064-5E502C8EF6D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5772E408-FB83-43AA-8064-5E502C8EF6D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5772E408-FB83-43AA-8064-5E502C8EF6D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5772E408-FB83-43AA-8064-5E502C8EF6D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C02D86-3547-4D62-A7D9-2AB75AAE6CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C02D86-3547-4D62-A7D9-2AB75AAE6CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C02D86-3547-4D62-A7D9-2AB75AAE6CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C02D86-3547-4D62-A7D9-2AB75AAE6CAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

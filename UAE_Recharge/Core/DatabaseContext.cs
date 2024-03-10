@@ -53,8 +53,8 @@ namespace UAE_Recharge.Core.Database
         {
             try
             {
-                //// Delete existing users
-                //await Connection.DeleteAllAsync<User>();
+                // Delete existing users
+                await Connection.DeleteAllAsync<User>();
 
                 //// Delete existing beneficiaries
                 //await Connection.DeleteAllAsync<Beneficiary>();
@@ -64,11 +64,11 @@ namespace UAE_Recharge.Core.Database
 
                 // Check if data already exists
                 var existingUsers = await Connection.Table<User>().CountAsync();
-                var existingBeneficiaries = await Connection.Table<Beneficiary>().CountAsync();
-                var existingTransactions = await Connection.Table<Transaction>().CountAsync();
+                //var existingBeneficiaries = await Connection.Table<Beneficiary>().CountAsync();
+                //var existingTransactions = await Connection.Table<Transaction>().CountAsync();
 
                 // If data doesn't exist, insert mock data
-                if (existingUsers == 0 && existingBeneficiaries == 0 && existingTransactions == 0)
+                if (existingUsers == 0)
                 {
                 // Insert mock data for users
                 await Connection.InsertAllAsync(new List<User>

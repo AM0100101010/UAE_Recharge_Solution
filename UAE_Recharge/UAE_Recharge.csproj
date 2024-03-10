@@ -64,8 +64,10 @@
     <Compile Include="Activities\HomeActivity.cs" />
     <Compile Include="Activities\SignInActivity.cs" />
     <Compile Include="Activities\SignUpActivity.cs" />
-    <Compile Include="Activities\BeneficiaryAdapter.cs" />
+    <Compile Include="Activities\TransactionHistoryActivity.cs" />
+    <Compile Include="Adaptors\BeneficiaryAdapter.cs" />
     <Compile Include="Activities\TopUpActivity.cs" />
+    <Compile Include="Adaptors\TransactionAdapter.cs" />
     <Compile Include="Core\ApiClient.cs" />
     <Compile Include="Core\DatabaseContext.cs" />
     <Compile Include="Core\Interfaces\ITransactionService.cs" />
@@ -182,6 +184,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_top_up.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_transaction_history.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\transaction_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\transaction_item.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
