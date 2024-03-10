@@ -23,5 +23,8 @@ namespace UAE_Recharge.Core.Models
         public bool IsVerified { get; set; } // Indicates if the user has been verfied
 
         public bool IsSynced { get; set; } // Indicates if the user has been synced
+
+        //public string Month { get; set; }
+        //public int Amount_Allowed { get; set; }
     }
 }
