@@ -64,7 +64,7 @@ namespace UAE_Recharge.Adapters
         {
             // Bind data to views
             _beneficiaryTextView.Text = transaction.BeneficiaryNickname;
-            _amountTextView.Text = $"Amount: {transaction.Amount}";
+            _amountTextView.Text = $"Amount: {transaction.Amount} AED";
             _timestampTextView.Text = $"Date: {transaction.Timestamp.ToString("yyyy-MM-dd HH:mm:ss")}";
         }
     }
