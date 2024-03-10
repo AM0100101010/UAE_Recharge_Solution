@@ -44,6 +44,7 @@ namespace UAE_Recharge
             int currentCount = await _beneficiaryService.GetBeneficiaryCountAsync(user.Id);
             // Increment the count by 1 to reflect the addition of the new beneficiary
             currentCount++;
+
             // Update the beneficiary count TextView
             if (currentCount > 5)
             {

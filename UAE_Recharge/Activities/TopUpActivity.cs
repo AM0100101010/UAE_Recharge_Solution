@@ -80,6 +80,8 @@ namespace UAE_Recharge
 
         private void LoadRemainingBalances()
         {
+            // This code has been highlighted because it should run on a background thread and better on a background service left here for reference
+            // the monthly limit for the user and beneficiary should be calculated updated on the data records then just displayed on the UI
             // Calculate remaining balances
             //decimal totalToppedUpThisMonth = transactionService.GetTotalToppedUpThisMonthAsync(user.Id).Result;
             //decimal remainingUserBalance = 3000 - totalToppedUpThisMonth;

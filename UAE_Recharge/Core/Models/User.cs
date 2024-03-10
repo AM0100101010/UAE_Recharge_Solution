@@ -20,7 +20,7 @@ namespace UAE_Recharge.Core.Models
         public string PhoneNumber { get; set; }
         public string Password { get; set; }
         public int Balance { get; set; }
-        public bool IsVerified { get; set; } // Indicates if the user has been synced
+        public bool IsVerified { get; set; } // Indicates if the user has been verfied
 
         public bool IsSynced { get; set; } // Indicates if the user has been synced
     }

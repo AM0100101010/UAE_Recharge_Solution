@@ -54,7 +54,7 @@ namespace UAE_Recharge.Core.Database
             try
             {
                 // Delete existing users
-                await Connection.DeleteAllAsync<User>();
+                //await Connection.DeleteAllAsync<User>();
 
                 //// Delete existing beneficiaries
                 //await Connection.DeleteAllAsync<Beneficiary>();
@@ -77,7 +77,8 @@ namespace UAE_Recharge.Core.Database
                         new User {Id = 2, Username = "ahmed2", PhoneNumber = "0987654321", Password = "password2", Balance = 3500, IsSynced = true, IsVerified = false }
                     });
 
-                    //        // Insert mock data for beneficiaries
+                    // Add more mock data as needed
+                    // Insert mock data for beneficiaries
                     //await Connection.InsertAllAsync(new List<Beneficiary>
                     //{
                     //    new Beneficiary {Id = 1, UserId = 1, Nickname = "friend1", PhoneNumber = "1111111111", TotalTopUps = 50, IsSynced = true },
@@ -91,7 +92,7 @@ namespace UAE_Recharge.Core.Database
                     //    new Transaction {Id = 2, UserId = 2, BeneficiaryId = 2, Amount = 100, Timestamp = DateTime.Now, IsSynced = true }
                     //});
 
-                    // Add more mock data as needed
+
                 }
             }
             catch (Exception ex)
